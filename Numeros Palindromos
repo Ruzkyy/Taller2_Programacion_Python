@@ -1,0 +1,24 @@
+while True:
+    numero_str = input("Ingrese un número: ")
+    
+    if numero_str.isdigit():
+        numero = int(numero_str)
+        numero_original = numero
+        numero_invertido = 0
+
+        while numero > 0:
+            digito = numero % 10
+            numero_invertido = numero_invertido * 10 + digito
+            numero //= 10
+
+        if numero_original == numero_invertido:
+            print(f"{numero_original} es palíndromo")
+        else:
+            print(f"{numero_original} no es palíndromo")
+    else:
+        print("Entrada no válida. Por favor, ingrese un número entero positivo.")
+
+    opcion = input("¿Desea verificar otro número? (1 para sí, 0 para no): ")
+
+    if opcion != '1':
+        break
