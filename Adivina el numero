@@ -1,0 +1,18 @@
+import random
+
+numero_pensado = random.randint(0, 100)
+intentos = 0
+
+print("Adivina el número entre 0 y 100.")
+
+while True:
+    intento = int(input(f"Intento {intentos + 1}: "))
+    intentos += 1
+
+    if intento < numero_pensado:
+        print(f"Es mayor que {intento}")
+    elif intento > numero_pensado:
+        print(f"Es menor que {intento}")
+    else:
+        print(f"Correcto. Adivinaste en {intentos} intentos.")
+        break
