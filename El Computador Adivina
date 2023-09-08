@@ -1,0 +1,22 @@
+print("Piense en un número entre 1 y 100.")
+input("Cuando esté listo, presione Enter.")
+
+minimo = 1
+maximo = 100
+intentos = 0
+
+while True:
+    intento = (minimo + maximo) // 2
+    intentos += 1
+
+    respuesta = input(f"Intento {intentos}: ¿Es {intento} mayor (>), menor (<) o igual (=) al número pensado? ")
+
+    if respuesta == ">":
+        minimo = intento + 1
+    elif respuesta == "<":
+        maximo = intento - 1
+    elif respuesta == "=":
+        print(f"Adiviné en {intentos} intentos. ¡Gracias por jugar!")
+        break
+    else:
+        print("Respuesta no válida. Por favor, ingrese >, < o =.")
